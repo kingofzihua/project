@@ -1,12 +1,12 @@
 {
-    "name": "kingofzihua\project",
+    "name": "kingofzihua/project",
     "homepage": "https://github.com/kingofhua/",
     "license": "MIT",
     "version": "1.0.0",
     "authors": [
         {
             "name": "王子华",
-            "email": "kingofzihua@gmail.com",
+            "email": "kingofzihua@gmail.com"
         }
     ],
     "require": {},

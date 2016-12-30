@@ -1,6 +1,6 @@
 <?php 
 
-namespace kingofzihua\project;
+namespace Kingofzihua\project;
 
 /**
 * 

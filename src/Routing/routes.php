@@ -8,10 +8,13 @@ use Illuminate\Routing\Router;
 Route::group([
 //    'middleware' => 'auth:api',
     'namespace' => 'App\Wechat',
-    'prefix' => 'demo'
+    'prefix' => 'Project'
 ], function (Router $router) {
     Route::get('/', function () {
-        echo "oh my gods";
+        echo "welcome";
     });
     Route::get('/test', "ApiController@boot");
+    Route::get('/view', function (){
+        return view('views::test');
+    });
 });

@@ -20,6 +20,20 @@ class TestServiceProvider extends ServiceProvider
 
     }
 
+
+    /**
+     *  加载文件
+     */
+    public function loads()
+    {
+        //扩展路由
+        if (!$this->app->routesAreCached()) {
+            require __DIR__ . '/../Routing/routes.php';
+        }
+        //视图
+        $this->loadViewsFrom(__DIR__ . '/../../views', 'views');
+    }
+
     /**
      * 发布资源 [移动文件]
      * 将项目文件移动到外面
@@ -35,18 +49,4 @@ class TestServiceProvider extends ServiceProvider
         //assets--资源文件
 
     }
-
-    /**
-     *  加载文件
-     */
-    public function loads()
-    {
-        //扩展路由
-        if (!$this->app->routesAreCached()) {
-            require __DIR__ . '/../Routing/routes.php';
-        }
-        //视图
-//        $this->loadViewsFrom(__DIR__ . '/path/to/views', 'courier');
-    }
-
 }

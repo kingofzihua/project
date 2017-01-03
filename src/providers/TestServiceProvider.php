@@ -20,19 +20,24 @@ class TestServiceProvider extends ServiceProvider
 
     }
 
-
     /**
      *  加载文件
      */
     public function loads()
     {
+        //config
+        $this->mergeConfigFrom(
+            __DIR__ . '/../../config/project.php', 'project'
+        );
+
         //扩展路由
         if (!$this->app->routesAreCached()) {
             require __DIR__ . '/../Routing/routes.php';
         }
         //视图
-        $this->loadViewsFrom(__DIR__ . '/../../views', 'views');
+//        $this->loadViewsFrom(__DIR__ . '/path/to/views', 'courier');
     }
+
 
     /**
      * 发布资源 [移动文件]
@@ -41,7 +46,9 @@ class TestServiceProvider extends ServiceProvider
     public function publishs()
     {
         //config--配置文件
-
+        $this->publishes([
+            __DIR__ . '/../../config/project.php' => config_path('project.php'),
+        ]);
         //routes--路由文件
 
         //view--视图文件
@@ -49,4 +56,5 @@ class TestServiceProvider extends ServiceProvider
         //assets--资源文件
 
     }
+
 }

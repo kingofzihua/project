@@ -1,6 +1,6 @@
 <?php
 
-namespace Kingofzihua\project\Providers;
+namespace Kingofzihua\Project\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

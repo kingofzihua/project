@@ -35,7 +35,7 @@ class TestServiceProvider extends ServiceProvider
             require __DIR__ . '/../Routing/routes.php';
         }
         //视图
-//        $this->loadViewsFrom(__DIR__ . '/path/to/views', 'courier');
+       $this->loadViewsFrom(__DIR__ . '/../../views', 'views');
     }
 
 
